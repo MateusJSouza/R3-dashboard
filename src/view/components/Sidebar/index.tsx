@@ -12,7 +12,7 @@ import { SignoutIcon } from '../icons/SignoutIcon'
 
 export function Sidebar() {
   return (
-    <aside className="flex flex-col bg-zinc-300 px-12 py-10">
+    <aside className="bg-greys-50 flex flex-col px-12 py-10">
       <div className="mb-12 flex items-center gap-6">
         <Logo />
         <p className="text-greys-900 text-3xl font-bold leading-[150%]">Site</p>
@@ -28,7 +28,7 @@ export function Sidebar() {
         <NavItem icon={SettingsIcon} title="Settings" />
       </div>
 
-      <div className="mt-auto flex items-center gap-6">
+      <div className="mt-auto flex cursor-pointer items-center gap-6">
         <SignoutIcon />
         <p className="text-lg leading-normal text-red-900">Sign Out</p>
       </div>
