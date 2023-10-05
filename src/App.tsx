@@ -2,6 +2,9 @@ import { Sidebar } from './view/components/Sidebar'
 import { Header } from './view/components/Header'
 import { Sales } from './view/components/Sales'
 import { UsersCard } from './view/components/UsersCard'
+import { TargetCard } from './view/components/TargetCard'
+import { CustomerCard } from './view/components/CustomerCard'
+import { TopSellersCard } from './view/components/TopSellersCard'
 
 export function App() {
   return (
@@ -15,6 +18,14 @@ export function App() {
           <Sales />
 
           <UsersCard />
+
+          <TargetCard />
+
+          <CustomerCard />
+
+          <div className="col-span-full">
+            <TopSellersCard />
+          </div>
         </div>
       </main>
     </div>
