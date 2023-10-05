@@ -4,11 +4,15 @@ export default {
   theme: {
     fontFamily: {
       body: ['Poppins', 'sans-serif'],
+      table: ['Open Sans', 'sans-serif']
     },
     extend: {
       gridTemplateColumns: {
         app: 'minmax(18rem, 20rem) 1fr',
         card: '1fr 26.25rem',
+      },
+      fontSize: {
+        'table': '13px'
       },
       borderRadius: {
         20: '1.25rem',
