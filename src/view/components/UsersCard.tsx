@@ -1,6 +1,7 @@
-import { MyResponsivePie } from './ResponsivePie'
-
-import data from '../../mocks/data.json'
+import { PieChart } from './Charts/PieChart'
+import { convertedData } from '../../utils/convertedData'
+import { cn } from '../../utils/cn'
+import { mockPieData } from '../../mocks/mockData'
 
 export function UsersCard() {
   return (
@@ -14,33 +15,23 @@ export function UsersCard() {
         </span>
       </div>
 
-      <div className="mt-12 flex items-center justify-center gap-4">
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2">
-            <div className="h-3 w-5 rounded-sm bg-[#497AF9]" />
-            <span className="text-greys-700 w-20 text-[10px] leading-4">
-              62% New
-            </span>
-          </div>
+      <div className="w-full h-[280px] flex flex-row-reverse items-center justify-center">
+        <PieChart />
+        <ul className="space-y-6">
+          {mockPieData.map(item => (
+            <li key={item.id} className="flex gap-2">
+              <div className={cn(
+                'w-5 h-3 rounded-sm',
 
-          <div className="flex items-center gap-2">
-            <div className="h-3 w-5 rounded-sm bg-[#789DFB]" />
-            <span className="text-greys-700 w-20 text-[10px] leading-4">
-              13% Returning
-            </span>
-          </div>
+                `${item.label === 'New' && 'bg-[#497AF9]'}`,
+                `${item.label === 'Returning' && 'bg-[#789DFB]'}`,
+                `${item.label === 'Inactive' && 'bg-[#789DFB]'}`,
+              )} />
 
-          <div className="flex items-center gap-2">
-            <div className="h-3 w-5 rounded-sm bg-[#E5E5E5]" />
-            <span className="text-greys-700 w-20 text-[10px] leading-4">
-              23% Inactive
-            </span>
-          </div>
-        </div>
-
-        <div className="h-80">
-          <MyResponsivePie data={data} />
-        </div>
+              <span className="text-[10px] leading-4 w-20">{`${convertedData(item.value)}% ${item.label}`}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
