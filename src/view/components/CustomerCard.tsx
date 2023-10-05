@@ -4,7 +4,7 @@ import { CustomerSatisfactionIcon } from "./icons/CustomerSatisfactionIcon"
 export function CustomerCard() {
   return (
     <div className="rounded-20 bg-white px-8 pb-8 pt-6 shadow-[0px_4px_20px_0px_rgba(238,238,238,0.50)]">
-      <p className="text-primary-900 text-xl font-bold leading-8">Customer Satisfaction</p>
+      <p className="text-primary-900 text-xl font-semibold leading-8">Customer Satisfaction</p>
 
       <div className="w-full h-40"><LineChart /></div>
 

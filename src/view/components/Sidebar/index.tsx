@@ -15,7 +15,7 @@ export function Sidebar() {
     <aside className="bg-greys-50 flex flex-col px-12 py-10">
       <div className="mb-12 flex items-center gap-6">
         <Logo />
-        <p className="text-greys-900 text-3xl font-bold leading-[150%]">Site</p>
+        <p className="text-greys-900 text-3xl font-semibold leading-[150%]">Site</p>
       </div>
 
       <div className="flex flex-col gap-6">

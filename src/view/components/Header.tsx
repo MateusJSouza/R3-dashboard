@@ -4,7 +4,7 @@ import notificationIcon from '../../assets/notification.svg'
 export function Header() {
   return (
     <header className="flex items-center justify-between bg-white px-9 py-8">
-      <p className="text-greys-900 text-3xl font-bold leading-[140%]">
+      <p className="text-greys-900 text-3xl font-semibold leading-[140%]">
         Dashboard
       </p>
 

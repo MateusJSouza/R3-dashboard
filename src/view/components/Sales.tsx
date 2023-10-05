@@ -9,7 +9,7 @@ export function Sales() {
     <div className="rounded-20 bg-white px-8 pb-8 pt-6 shadow-[0px_4px_20px_0px_rgba(238,238,238,0.50)]">
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
-          <h1 className="text-primary-900 text-xl font-bold leading-8">
+          <h1 className="text-primary-900 text-xl font-semibold leading-8">
             Today&lsquo;s Sales
           </h1>
           <span className="text-greys-700 leading-[1.875rem]">
