@@ -1,4 +1,14 @@
-export function Table() {
+import { Badge } from "../Badge"
+import { ProgressBar } from "../ProgressBar"
+import { DataItem } from "../TopSellersCard"
+
+interface TableProps {
+  data: DataItem[]
+}
+
+export function Table({ data }: TableProps) {
+  const slicedData = data.slice(0, 4)
+
   return (
     <table className="mt-4 min-w-full divide-y divide-gray-200">
       <thead className="">
@@ -8,23 +18,23 @@ export function Table() {
           <th scope="col" className="px-6 py-3 text-left font-medium leading-4">Popularity</th>
           <th scope="col" className="px-6 py-3 text-left font-medium leading-4">Sales</th>
         </tr>
-      </thead >
+      </thead>
       <tbody className="bg-white divide-y divide-gray-200">
-        <tr>
-          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">01</td>
-          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Name 1</td>
-          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-            <div className="w-64 h-2 bg-gray-200 rounded-full">
-              <div className="w-3/4 h-full bg-blue-500 rounded-full" />
-            </div>
-          </td>
-          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-            <span className="inline-flex items-center px-5 py-1 rounded-lg text-xs font-medium border border-[#0095FF] bg-blue-50 text-[#0095FF]">
-              45%
-            </span>
-          </td>
-        </tr>
+        {slicedData.map((item, index) => (
+          <tr key={item.id}>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">
+              {String(index + 1).padStart(2, "0")}
+            </td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.name}</td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              <ProgressBar variant={index === 0 ? 'blue' : index === 1 ? 'green' : index === 2 ? 'orange' : 'purple'} />
+            </td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              <Badge variant={index === 0 ? 'blue' : index === 1 ? 'green' : index === 2 ? 'orange' : 'purple'} />
+            </td>
+          </tr>
+        ))}
       </tbody>
-    </table >
+    </table>
   )
 }
