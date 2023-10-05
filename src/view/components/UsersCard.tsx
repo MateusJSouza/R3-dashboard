@@ -28,7 +28,7 @@ export function UsersCard() {
                 `${item.label === 'Inactive' && 'bg-[#789DFB]'}`,
               )} />
 
-              <span className="text-[10px] leading-4 w-20">{`${convertedData(item.value)}% ${item.label}`}</span>
+              <span className="text-[10px] leading-4 w-20 text-greys-700">{`${convertedData(item.value)}% ${item.label}`}</span>
             </li>
           ))}
         </ul>
