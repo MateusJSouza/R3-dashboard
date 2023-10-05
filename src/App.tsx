@@ -1,6 +1,6 @@
 import { Sidebar } from './view/components/Sidebar'
 import { Header } from './view/components/Header'
-import { Sales } from './view/components/Sales'
+import { SalesCard } from './view/components/SalesCard'
 import { UsersCard } from './view/components/UsersCard'
 import { TargetCard } from './view/components/TargetCard'
 import { CustomerCard } from './view/components/CustomerCard'
@@ -15,7 +15,7 @@ export function App() {
         <Header />
 
         <div className="grid-cols-card grid gap-8 p-8">
-          <Sales />
+          <SalesCard />
 
           <UsersCard />
 
