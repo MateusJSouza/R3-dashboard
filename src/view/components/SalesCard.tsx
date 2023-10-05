@@ -4,9 +4,9 @@ import { ProductSoldIcon } from './icons/ProductSoldIcon'
 import { TotalOrderIcon } from './icons/TotalOrderIcon'
 import { TotalSalesIcon } from './icons/TotalSalesIcon'
 
-export function Sales() {
+export function SalesCard() {
   return (
-    <div className="rounded-20 bg-white px-8 pb-8 pt-6 shadow-[0px_4px_20px_0px_rgba(238,238,238,0.50)]">
+    <div className="rounded-20 bg-white px-[30px] pb-8 pt-6 shadow-[0px_4px_20px_0px_rgba(238,238,238,0.50)]">
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
           <h1 className="text-primary-900 text-xl font-semibold leading-8">
@@ -17,15 +17,15 @@ export function Sales() {
           </span>
         </div>
 
-        <div className="flex cursor-pointer items-center gap-2 rounded-lg border border-[#C3D3E2] px-3 py-2">
+        <div className="flex cursor-pointer items-center gap-2 rounded-lg border border-[#C3D3E2] px-4 py-[10px]">
           <ExportIcon />
           <p className="text-sm font-medium leading-5 text-[#0F3659]">Export</p>
         </div>
       </div>
 
-      <div className="mt-11 flex gap-8">
+      <div className="mt-11 flex gap-8 flex-grow">
         <Card
-          className="bg-red-100"
+          className="bg-red-100 flex-grow"
           icon={TotalSalesIcon}
           percentage="8"
           title="Total Sales"
@@ -33,7 +33,7 @@ export function Sales() {
         />
 
         <Card
-          className="bg-yellow-100"
+          className="bg-yellow-100 flex-grow"
           icon={TotalOrderIcon}
           percentage="5"
           title="Total Order"
@@ -41,7 +41,7 @@ export function Sales() {
         />
 
         <Card
-          className="bg-green-100"
+          className="bg-green-100 flex-grow"
           icon={ProductSoldIcon}
           percentage="1,2"
           title="Product Sold"
