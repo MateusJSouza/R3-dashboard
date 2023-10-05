@@ -1,13 +1,10 @@
-import { mockBarData as data } from "../../../mocks/mockData"
+import { mockBarData as data } from '../../../mocks/mockData'
 import { ResponsiveBar } from '@nivo/bar'
 
 export const BarChart = () => (
   <ResponsiveBar
     data={data}
-    keys={[
-      'reality',
-      'target',
-    ]}
+    keys={['reality', 'target']}
     indexBy="month"
     margin={{ top: 50, right: 10, bottom: 50, left: 10 }}
     padding={0.3}
@@ -16,7 +13,9 @@ export const BarChart = () => (
     groupMode="grouped"
     valueScale={{ type: 'linear' }}
     indexScale={{ type: 'band', round: false }}
-    colors={({ data, id }) => (id === 'reality' ? data.realityColor : data.targetColor)}
+    colors={({ data, id }) =>
+      id === 'reality' ? data.realityColor : data.targetColor
+    }
     borderRadius={4}
     isInteractive={true}
     axisTop={null}

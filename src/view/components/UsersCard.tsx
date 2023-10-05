@@ -18,17 +18,21 @@ export function UsersCard() {
       <div className="w-full h-[280px] flex flex-row-reverse items-center justify-center">
         <PieChart />
         <ul className="space-y-6">
-          {mockPieData.map(item => (
+          {mockPieData.map((item) => (
             <li key={item.id} className="flex gap-2">
-              <div className={cn(
-                'w-5 h-3 rounded-sm',
+              <div
+                className={cn(
+                  'w-5 h-3 rounded-sm',
 
-                `${item.label === 'New' && 'bg-[#497AF9]'}`,
-                `${item.label === 'Returning' && 'bg-[#789DFB]'}`,
-                `${item.label === 'Inactive' && 'bg-[#789DFB]'}`,
-              )} />
+                  `${item.label === 'New' && 'bg-[#497AF9]'}`,
+                  `${item.label === 'Returning' && 'bg-[#789DFB]'}`,
+                  `${item.label === 'Inactive' && 'bg-[#789DFB]'}`,
+                )}
+              />
 
-              <span className="text-[10px] leading-4 w-20 text-greys-700">{`${convertedData(item.value)}% ${item.label}`}</span>
+              <span className="text-[10px] leading-4 w-20 text-greys-700">{`${convertedData(
+                item.value,
+              )}% ${item.label}`}</span>
             </li>
           ))}
         </ul>

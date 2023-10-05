@@ -13,7 +13,7 @@ export function LineChart() {
         min: 'auto',
         max: 'auto',
         stacked: true,
-        reverse: false
+        reverse: false,
       }}
       yFormat=" >-.2f"
       curve="natural"
@@ -27,7 +27,7 @@ export function LineChart() {
       enableGridY={false}
       enablePoints={true}
       enableCrosshair={false}
-      colors={d => d.color}
+      colors={(d) => d.color}
       pointSize={8}
       pointBorderWidth={2}
       pointLabelYOffset={-12}

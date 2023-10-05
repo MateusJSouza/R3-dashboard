@@ -11,19 +11,25 @@ export function RealitySalesIcon() {
         <rect x="0.00540161" width={36} height={36} rx={6} fill="#E2FFF3" />
         <mask
           id="mask0_1_301"
-          style={{ maskType: "luminance" }}
+          style={{ maskType: 'luminance' }}
           maskUnits="userSpaceOnUse"
           x={3}
           y={3}
           width={30}
           height={30}
         >
-          <rect x="3.60501" y="3.6001" width="28.8" height="28.8" fill="white" />
+          <rect
+            x="3.60501"
+            y="3.6001"
+            width="28.8"
+            height="28.8"
+            fill="white"
+          />
         </mask>
         <g mask="url(#mask0_1_301)">
           <mask
             id="mask1_1_301"
-            style={{ maskType: "luminance" }}
+            style={{ maskType: 'luminance' }}
             maskUnits="userSpaceOnUse"
             x={9}
             y={9}
@@ -83,6 +89,5 @@ export function RealitySalesIcon() {
         </clipPath>
       </defs>
     </svg>
-
   )
 }

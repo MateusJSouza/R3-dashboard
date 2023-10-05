@@ -4,7 +4,7 @@ export default {
   theme: {
     fontFamily: {
       body: ['Poppins', 'sans-serif'],
-      table: ['Open Sans', 'sans-serif']
+      table: ['Open Sans', 'sans-serif'],
     },
     extend: {
       gridTemplateColumns: {
@@ -12,7 +12,7 @@ export default {
         card: '1fr 26.25rem',
       },
       fontSize: {
-        'table': '13px'
+        table: '13px',
       },
       borderRadius: {
         20: '1.25rem',

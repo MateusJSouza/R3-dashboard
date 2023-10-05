@@ -11,14 +11,20 @@ export function TargetSalesIcon() {
         <rect x="3.05176e-05" width={36} height={36} rx={6} fill="#FFF4DE" />
         <mask
           id="mask0_1_318"
-          style={{ maskType: "luminance" }}
+          style={{ maskType: 'luminance' }}
           maskUnits="userSpaceOnUse"
           x={9}
           y={9}
           width={19}
           height={18}
         >
-          <rect x="9.62039" y="9.36011" width="17.76" height="17.28" fill="white" />
+          <rect
+            x="9.62039"
+            y="9.36011"
+            width="17.76"
+            height="17.28"
+            fill="white"
+          />
         </mask>
         <g mask="url(#mask0_1_318)">
           <path
@@ -41,6 +47,5 @@ export function TargetSalesIcon() {
         </clipPath>
       </defs>
     </svg>
-
   )
 }
