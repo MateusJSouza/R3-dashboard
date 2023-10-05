@@ -12,7 +12,7 @@ import { SignoutIcon } from '../icons/SignoutIcon'
 
 export function Sidebar() {
   return (
-    <aside className="bg-greys-50 flex flex-col px-12 py-10">
+    <aside className="bg-greys-50 flex flex-col px-12 py-10 max-h-[100vh] top-0 sticky left-0">
       <div className="mb-12 flex items-center gap-6">
         <Logo />
         <p className="text-greys-900 text-3xl font-semibold leading-[150%]">
